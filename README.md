@@ -8,12 +8,14 @@ de um grafo.
 As dependências são gerenciadas usando `bundle`, para instalar rode:
 
 ```shell
+$ # testado em bash e zsh
 $ bundle install
 ```
 
 A execução é feita por meio de uma task Rake, que pode ser conferida [aqui](lib/tasks/console.rake).
 E a estrutura do comando é dada por:
 ```shell
+$ # testado em bash e zsh
 $ # É possível que seja necessário colocar o `bundle exec` antes do comando
 $ rake main:run[<path/to/input/file.csv>,<source>-<target>]
 ```
@@ -21,6 +23,7 @@ $ rake main:run[<path/to/input/file.csv>,<source>-<target>]
 Para executar de acordo com o [arquivo de instruções](INSTRUCTIONS.md), basta:
 
 ```shell
+$ # testado em bash e zsh
 $ # É possível que seja necessário colocar o `bundle exec` antes do comando
 $ rake main:run[resources/input-file.csv,GRU-CDG]
   Best route: GRU -> BRC -> SCL -> ORL -> CDG
@@ -54,6 +57,7 @@ respectivamente.
 
 O setup de testes é feito utilizando a gema `rspec`, e os testes podem ser rodados com o comando:
 ```shell
+$ # testado em bash e zsh
 $ # É possível que seja necessário colocar o `bundle exec` antes do comando
 $ rspec
 ```
