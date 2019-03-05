@@ -8,4 +8,8 @@ describe Main do
     path = %w[GRU CNF BSB]
     expect(Main.pretty_format_path(path)).to eq "GRU -> CNF -> BSB"
   end
+
+  it "prints 'Not found' when path is nil" do
+    expect(Main.pretty_format_path(nil)).to eq "Not found"
+  end
 end

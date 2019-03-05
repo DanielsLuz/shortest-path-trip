@@ -16,6 +16,6 @@ class Main
   end
 
   def self.pretty_format_path(path)
-    path.join(" -> ")
+    path ? path.join(" -> ") : "Not found"
   end
 end
