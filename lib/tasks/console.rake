@@ -6,7 +6,13 @@ task :console do
   binding.pry
 end
 
-task :run do
-  require './config/application'
-  require 'pry'
+namespace :main do
+  desc 'Executes `Main::run`'
+  desc 'Usage: `bundle exec rake main:run[<path/to/input.txt>,<source>-<target>]`'
+  desc 'Example: `bundle exec rake main:run[resources/input-file.txt,GRU-CDG]`'
+  task :run, [:input_file, :route] do |t, args|
+    require './config/application'
+    require 'pry'
+    Main.run(args.input_file, args.route, *args.extras)
+  end
 end
